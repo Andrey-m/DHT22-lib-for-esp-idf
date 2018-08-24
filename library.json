@@ -1,0 +1,18 @@
+{
+    "name": "DHT22 C/C++ library for ESP32 (ESP-IDF)",
+    "keywords": "DHT22, sensors, esp32, esp-idf, espressif",
+    "description": "Library for reading data from the DHT22 digital humidity & temperature sensor.",
+    "authors": {
+        "name": "Andrey Mitrokhin",
+        "email": "andrey@mitrokhin.ru",
+        "url": "http://mitrokhin.ru",
+        "maintainer": true
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Andrey-m/DHT22-lib-for-esp-idf.git"
+    },
+    "version": "1.0.0",
+    "frameworks": "espidf",
+    "platforms": "espressif32"
+}
