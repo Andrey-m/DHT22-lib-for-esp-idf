@@ -10,7 +10,7 @@
 ---------------------------------------------------------------------------------*/
 #define LOG_LOCAL_LEVEL ESP_LOG_DEBUG
 
-#include <gpio.h>
+#include "driver/gpio.h"
 #include <esp_log.h>
 
 #include "DHT.hpp"
