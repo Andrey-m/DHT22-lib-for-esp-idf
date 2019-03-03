@@ -45,7 +45,6 @@ void app_main()
 
     esp_log_level_set("*", ESP_LOG_INFO);
 
-    vTaskDelay(1000 / portTICK_RATE_MS);
     xTaskCreate(&DHT_task, "DHT_task", 2048, NULL, 5, NULL);
 }
 ```
@@ -88,7 +87,6 @@ void app_main()
 
     esp_log_level_set("*", ESP_LOG_INFO);
 
-    vTaskDelay(1000 / portTICK_RATE_MS);
     xTaskCreate(&DHT_task, "DHT_task", 2048, NULL, 5, NULL);
 }
 ```

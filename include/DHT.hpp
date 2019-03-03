@@ -13,8 +13,7 @@
 
 class DHT
 {
-
-public:
+  public:
 	DHT();
 
 	void setDHTgpio(gpio_num_t gpio);
@@ -23,7 +22,7 @@ public:
 	float getHumidity();
 	float getTemperature();
 
-private:
+  private:
 	gpio_num_t DHTgpio;
 	float humidity = 0.;
 	float temperature = 0.;
