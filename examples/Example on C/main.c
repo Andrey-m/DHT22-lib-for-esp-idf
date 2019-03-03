@@ -13,7 +13,7 @@ static const char *TAG = "DHT";
 
 void DHT_task(void *pvParameter)
 {
-    setDHTgpio(4);
+    setDHTgpio(GPIO_NUM_4);
     ESP_LOGI(TAG, "Starting DHT Task\n\n");
 
     while (1)

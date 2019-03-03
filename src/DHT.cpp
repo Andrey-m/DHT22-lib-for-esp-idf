@@ -26,7 +26,7 @@ static char TAG[] = "DHT";
 DHT::DHT()
 {
 
-    DHTgpio = (gpio_num_t)4;
+    DHTgpio = GPIO_NUM_4;
     humidity = 0.;
     temperature = 0.;
 }

@@ -14,7 +14,7 @@ See examples/Example on C/main.c
 ```C
 void DHT_task(void *pvParameter)
 {
-    setDHTgpio(4);
+    setDHTgpio(GPIO_NUM_4);
     ESP_LOGI(TAG, "Starting DHT Task\n\n");
 
     while (1)
@@ -56,7 +56,7 @@ See examples/Example on C++/main.cpp
 void DHT_task(void *pvParameter)
 {
     DHT dht;
-    dht.setDHTgpio((gpio_num_t)4);
+    dht.setDHTgpio(GPIO_NUM_4);
     ESP_LOGI(TAG, "Starting DHT Task\n\n");
 
     while (1)

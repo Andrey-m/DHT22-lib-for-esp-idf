@@ -19,7 +19,7 @@ extern "C"
 void DHT_task(void *pvParameter)
 {
     DHT dht;
-    dht.setDHTgpio((gpio_num_t)4);
+    dht.setDHTgpio(GPIO_NUM_4);
     ESP_LOGI(TAG, "Starting DHT Task\n\n");
 
     while (1)
