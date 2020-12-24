@@ -12,7 +12,7 @@
         "type": "git",
         "url": "https://github.com/Andrey-m/DHT22-lib-for-esp-idf.git"
     },
-    "version": "1.0.3",
+    "version": "1.0.4",
     "frameworks": "espidf",
     "platforms": "espressif32"
 }
