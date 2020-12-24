@@ -160,14 +160,14 @@ int DHT::readDHT()
     // == DHT will keep the line low for 80 us and then high for 80us ====
 
     uSec = getSignalLevel(85, 0);
-    // ESP_LOGD(TAG, "Response = %d", uSec);
+    // ESP_LOGI(TAG, "Response = %d", uSec);
     if (uSec < 0)
         return DHT_TIMEOUT_ERROR;
 
     // -- 80us up ------------------------
 
     uSec = getSignalLevel(85, 1);
-    // ESP_LOGD(TAG, "Response = %d", uSec);
+    // ESP_LOGI(TAG, "Response = %d", uSec);
     if (uSec < 0)
         return DHT_TIMEOUT_ERROR;
 
