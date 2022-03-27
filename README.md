@@ -90,3 +90,7 @@ void app_main()
     xTaskCreate(&DHT_task, "DHT_task", 2048, NULL, 5, NULL);
 }
 ```
+
+Copyright (c) 2022 ANDREY MITROKHIN.
+
+All rights reserved.
