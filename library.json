@@ -12,6 +12,7 @@
         "type": "git",
         "url": "https://github.com/Andrey-m/DHT22-lib-for-esp-idf.git"
     },
+    "license": "Apache-2.0",
     "version": "1.0.5",
     "frameworks": "espidf",
     "platforms": "espressif32"
