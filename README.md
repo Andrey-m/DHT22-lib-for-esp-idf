@@ -24,7 +24,7 @@ void DHT_task(void *pvParameter)
 
         errorHandler(ret);
 
-        ESP_LOGI(TAG, "Hum: %.1f Tmp: %.1f\n", getHumidity(), getTemperature())
+        ESP_LOGI(TAG, "Hum: %.1f Tmp: %.1f\n", getHumidity(), getTemperature());
 
         // -- wait at least 3 sec before reading again ------------
         // The interval of whole process must be beyond 2 seconds !!
@@ -66,7 +66,7 @@ void DHT_task(void *pvParameter)
 
         dht.errorHandler(ret);
 
-        ESP_LOGI(TAG, "Hum: %.1f Tmp: %.1f\n", dht.getHumidity(), dht.getTemperature())
+        ESP_LOGI(TAG, "Hum: %.1f Tmp: %.1f\n", dht.getHumidity(), dht.getTemperature());
 
         // -- wait at least 3 sec before reading again ------------
         // The interval of whole process must be beyond 2 seconds !!

@@ -3,7 +3,8 @@
 #include <freertos/task.h>
 #include "esp_system.h"
 #include "freertos/event_groups.h"
-#include "esp_event_loop.h"
+#include "driver/gpio.h"
+#include "esp_event.h"
 #include "nvs_flash.h"
 #include "esp_log.h"
 
@@ -29,7 +30,7 @@ void DHT_task(void *pvParameter)
 
         dht.errorHandler(ret);
 
-        ESP_LOGI(TAG, "Hum: %.1f Tmp: %.1f\n", dht.getHumidity(), dht.getTemperature())
+        ESP_LOGI(TAG, "Hum: %.1f Tmp: %.1f\n", dht.getHumidity(), dht.getTemperature());
 
         // -- wait at least 2 sec before reading again ------------
         // The interval of whole process must be beyond 2 seconds !!

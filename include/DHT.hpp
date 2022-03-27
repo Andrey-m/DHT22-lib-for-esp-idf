@@ -1,7 +1,5 @@
 /* 
-
 	DHT22 temperature sensor driver
-
 */
 
 #ifndef DHT_HPP

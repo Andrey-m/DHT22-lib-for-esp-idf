@@ -10,8 +10,8 @@
 ---------------------------------------------------------------------------------*/
 #define LOG_LOCAL_LEVEL ESP_LOG_DEBUG
 
-#include "driver/gpio.h"
 #include <esp_log.h>
+#include "driver/gpio.h"
 
 #include "DHT.hpp"
 
@@ -92,7 +92,7 @@ int DHT::getSignalLevel(int usTimeOut, bool state)
             return -1;
 
         ++uSec;
-        ets_delay_us(1); // uSec delay
+        esp_rom_delay_us(1); // uSec delay
     }
 
     return uSec;
@@ -149,11 +149,11 @@ int DHT::readDHT()
 
     // pull down for 3 ms for a smooth and nice wake up
     gpio_set_level(DHTgpio, 0);
-    ets_delay_us(3000);
+    esp_rom_delay_us(3000);
 
     // pull up for 25 us for a gentile asking for data
     gpio_set_level(DHTgpio, 1);
-    ets_delay_us(25);
+    esp_rom_delay_us(25);
 
     gpio_set_direction(DHTgpio, GPIO_MODE_INPUT); // change to input mode
 
