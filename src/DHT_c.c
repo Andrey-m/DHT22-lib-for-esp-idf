@@ -22,7 +22,7 @@
 #include "esp_log.h"
 #include "driver/gpio.h"
 
-#include "DHT.h"
+#include "../include/DHT.h"
 
 // == global defines =============================================
 
