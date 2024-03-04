@@ -28,13 +28,13 @@ void DHT_task(void *pvParameter)
 
         // -- wait at least 3 sec before reading again ------------
         // The interval of whole process must be beyond 2 seconds !!
-        vTaskDelay(3000 / portTICK_RATE_MS);
+        vTaskDelay(3000 / portTICK_PERIOD_MS);
     }
 }
 
 void app_main()
 {
-    //Initialize NVS
+    // Initialize NVS
     esp_err_t ret = nvs_flash_init();
     if (ret == ESP_ERR_NVS_NO_FREE_PAGES)
     {
@@ -44,6 +44,8 @@ void app_main()
     ESP_ERROR_CHECK(ret);
 
     esp_log_level_set("*", ESP_LOG_INFO);
+
+    esp_rom_gpio_pad_select_gpio(GPIO_NUM_4);
 
     xTaskCreate(&DHT_task, "DHT_task", 2048, NULL, 5, NULL);
 }
@@ -70,13 +72,13 @@ void DHT_task(void *pvParameter)
 
         // -- wait at least 3 sec before reading again ------------
         // The interval of whole process must be beyond 2 seconds !!
-        vTaskDelay(3000 / portTICK_RATE_MS);
+        vTaskDelay(3000 / portTICK_PERIOD_MS);
     }
 }
 
 void app_main()
 {
-    //Initialize NVS
+    // Initialize NVS
     esp_err_t ret = nvs_flash_init();
     if (ret == ESP_ERR_NVS_NO_FREE_PAGES)
     {
@@ -86,6 +88,8 @@ void app_main()
     ESP_ERROR_CHECK(ret);
 
     esp_log_level_set("*", ESP_LOG_INFO);
+
+    esp_rom_gpio_pad_select_gpio(GPIO_NUM_4);
 
     xTaskCreate(&DHT_task, "DHT_task", 2048, NULL, 5, NULL);
 }
